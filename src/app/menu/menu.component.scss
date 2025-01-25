@@ -1,0 +1,28 @@
+.menu {
+    display: flex;
+    background-color: rgb(48, 48, 48);
+
+    .logo {
+        font-family: monospace;
+        font-weight: bold;
+        color: white;
+    }
+
+    .botoes {
+        display: flex;
+        justify-content: space-between;
+        
+        span {
+            font-family: monospace;
+            font-weight: bold;
+            color: rgb(187, 187, 187);
+            font-weight: 100;
+            font-size: small;
+            font-family: monospace;
+            &:hover {
+                cursor: pointer;
+                color: white;
+            }
+        }
+    }
+}

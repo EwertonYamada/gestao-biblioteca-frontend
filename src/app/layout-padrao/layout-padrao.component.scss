@@ -1,0 +1,13 @@
+.layout-padrao {
+    width: 100vw;
+    height: 100vh;
+
+    .titulo-pagina {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .conteudo-pagina {
+        margin: 10px;
+    }
+}

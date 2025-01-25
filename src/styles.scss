@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+input {
+    border-radius: 4px;
+}
+
+.input-style {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        font-size: 14px;
+    }
+}
+
+.estilo-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(48, 48, 48);
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100px !important;
+    height: 20px !important;
+
+    &:hover {
+        background-color: rgb(68, 68, 68);
+    }
+}
+

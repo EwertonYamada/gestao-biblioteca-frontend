@@ -1,0 +1,23 @@
+<div class="usuario-form">
+    <div class="row inputs-cadastro">
+        <div class="col-md-3 input-style">
+            <label>Nome</label>
+            <input type="text" required [(ngModel)]="usuario.nome">
+        </div>
+        <div class="col-md-3 input-style">
+            <label>E-mail</label>
+            <input type="text" required [(ngModel)]="usuario.email">
+        </div>
+        <div class="col-md-3 input-style">
+            <label>Telefone</label>
+            <input type="text" required [(ngModel)]="usuario.telefone">
+        </div>
+        <div class="col-md-3 input-style">
+            <label>Data de cadastro</label>
+            <input type="text" required [(ngModel)]="usuario.dataCadastro">
+        </div>    
+    </div>
+    <div class="row container-btn-concluir">
+        <button class="estilo-btn" (click)="salvarUsuario()">SALVAR</button>
+    </div>
+</div>
