@@ -7,6 +7,7 @@ import { LivroFormComponent } from './livro/livro-form/livro-form.component';
 import { LayoutPadraoComponent } from './layout-padrao/layout-padrao.component';
 import { EmprestimoListComponent } from './emprestimo/emprestimo-list/emprestimo-list.component';
 import { EmprestimoFormComponent } from './emprestimo/emprestimo-form/emprestimo-form.component';
+import { GoogleBooksListComponent } from './google-books/google-books-list/google-books-list.component';
 
 export const routes: Routes = [
     {
@@ -21,6 +22,7 @@ export const routes: Routes = [
             {path: 'livro-form', component: LivroFormComponent, title: 'Livro'},
             {path: 'emprestimo-list', component: EmprestimoListComponent, title: 'Empréstimo'},
             {path: 'emprestimo-form', component: EmprestimoFormComponent, title: 'Empréstimo'},
+            {path: 'google-books', component: GoogleBooksListComponent, title: 'LIVROS DO GOOGLE BOOKS'},
 
         ]
       },

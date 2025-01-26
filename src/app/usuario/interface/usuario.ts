@@ -3,5 +3,5 @@ export interface Usuario {
     nome: string,
     email: string,
     telefone: string,
-    dataCadastro: string,
+    dataCadastro: Date,
 }

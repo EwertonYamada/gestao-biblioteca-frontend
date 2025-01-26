@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-livro-list',
@@ -8,5 +9,16 @@ import { Component } from '@angular/core';
   styleUrl: './livro-list.component.scss'
 })
 export class LivroListComponent {
+
+constructor(private router: Router) {}
+
+
+  public novoLivro(): void {
+    this.router.navigate(['/livro-form'])
+  }
+
+  public irParaBuscaGoogle(): void {
+    this.router.navigate(['/google-books'])
+  }
 
 }

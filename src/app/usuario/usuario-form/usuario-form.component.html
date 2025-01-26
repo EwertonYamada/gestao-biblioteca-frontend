@@ -4,20 +4,23 @@
             <label>Nome</label>
             <input type="text" required [(ngModel)]="usuario.nome">
         </div>
+
         <div class="col-md-3 input-style">
             <label>E-mail</label>
-            <input type="text" required [(ngModel)]="usuario.email">
+            <input type="email" required [(ngModel)]="usuario.email" >
         </div>
         <div class="col-md-3 input-style">
             <label>Telefone</label>
-            <input type="text" required [(ngModel)]="usuario.telefone">
+            <input type="tel" required [(ngModel)]="usuario.telefone">
         </div>
         <div class="col-md-3 input-style">
             <label>Data de cadastro</label>
-            <input type="text" required [(ngModel)]="usuario.dataCadastro">
-        </div>    
+            <input type="date" required [(ngModel)]="usuario.dataCadastro" disabled="true">
+        </div>
     </div>
-    <div class="row container-btn-concluir">
-        <button class="estilo-btn" (click)="salvarUsuario()">SALVAR</button>
+      
+    <div class="row container-btn">
+        <button class="estilo-btn" (click)="criarUsuario()">SALVAR</button>
+        <button class="estilo-btn" (click)="retornarParaList()">CANCELAR</button>
     </div>
 </div>
