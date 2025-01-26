@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { EmprestimoService } from '../service/emprestimo-service';
+import { HttpErrorResponse } from '@angular/common/http';
+import { Emprestimo } from '../interface/emprestimo';
 
 @Component({
   selector: 'app-emprestimo-list',
@@ -9,11 +12,25 @@ import { Router } from '@angular/router';
   styleUrl: './emprestimo-list.component.scss'
 })
 export class EmprestimoListComponent {
-
-  constructor(private router: Router) {}
+  public listaEmprestimos: Emprestimo[] = []
+  
+  constructor(
+    private router: Router,
+    private emprestimoService: EmprestimoService
+  ) {}
 
   public novoEmprestimo(): void {
     this.router.navigate(['/emprestimo-form'])
   }
 
+  public buscarTodosEmprestimos(): void {
+    this.emprestimoService.buscarTodosEmprestimos().subscribe({
+      next: (response) => {         
+        this.listaEmprestimos = response
+      },
+      error: (error: HttpErrorResponse) => {
+        console.error(error)
+      }
+    })
+  }
 }

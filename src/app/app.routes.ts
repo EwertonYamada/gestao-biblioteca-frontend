@@ -16,13 +16,13 @@ export const routes: Routes = [
         children: [
             {path: 'home', component: HomeComponent},
             {path: '', redirectTo: '/home', pathMatch: 'full'},
-            {path: 'usuario-list', component: UsuarioListComponent, title: 'Usuário'},
-            {path: 'usuario-form', component: UsuarioFormComponent, title: 'Usuário'},
-            {path: 'livro-list', component: LivroListComponent, title: 'Livro'},
-            {path: 'livro-form', component: LivroFormComponent, title: 'Livro'},
-            {path: 'emprestimo-list', component: EmprestimoListComponent, title: 'Empréstimo'},
-            {path: 'emprestimo-form', component: EmprestimoFormComponent, title: 'Empréstimo'},
-            {path: 'google-books', component: GoogleBooksListComponent, title: 'LIVROS DO GOOGLE BOOKS'},
+            {path: 'usuario-list', component: UsuarioListComponent, title: 'LISTA DE USUÁRIO'},
+            {path: 'usuario-form', component: UsuarioFormComponent, title: 'CADASTRO DE USUÁRIO'},
+            {path: 'livro-list', component: LivroListComponent, title: 'LISTA DE LIVRO'},
+            {path: 'livro-form', component: LivroFormComponent, title: 'CADASTRO DE LIVRO'},
+            {path: 'emprestimo-list', component: EmprestimoListComponent, title: 'LISTA DE EMPRÉSTIMO'},
+            {path: 'emprestimo-form', component: EmprestimoFormComponent, title: 'EMPRÉSTIMO'},
+            {path: 'google-books', component: GoogleBooksListComponent, title: 'BUSCA NO GOOGLE BOOKS'},
 
         ]
       },

@@ -1,14 +1,17 @@
 .menu {
+    height: 45px;
     display: flex;
+    align-items: center;
     background-color: rgb(48, 48, 48);
 
     .logo {
         font-family: monospace;
         font-weight: bold;
         color: white;
+        font-size: large;
     }
 
-    .botoes {
+    .link-modulo {
         display: flex;
         justify-content: space-between;
         
@@ -16,7 +19,7 @@
             font-family: monospace;
             font-weight: bold;
             color: rgb(187, 187, 187);
-            font-weight: 100;
+            font-weight: bold;
             font-size: small;
             font-family: monospace;
             &:hover {

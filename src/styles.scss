@@ -17,15 +17,16 @@ input {
     justify-content: center;
     align-items: center;
     background-color: rgb(48, 48, 48);
-    color: white;
+    color: rgb(255, 255, 255);
     border-radius: 5px;
     font-size: 14px;
     width: 180px !important;
     height: 25px !important;
     margin: 4px;
+    border: none;
 
     &:hover {
-        background-color: rgb(68, 68, 68);
+        background-color: rgb(100, 100, 100);
     }
 }
 

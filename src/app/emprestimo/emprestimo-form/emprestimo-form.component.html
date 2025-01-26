@@ -1,1 +1,32 @@
-<p>emprestimo-form works!</p>
+<div class="emprestimo-form">
+  <div class="row inputs-cadastro">
+    <div class="col-md-4 input-style">
+      <label>Usuário</label>
+      <select (focus)="buscarUsuarios()" [(ngModel)]="emprestimoDTO.usuarioId">
+        <option *ngFor="let usuario of listaUsuarios" [value]="usuario.id">
+          {{ usuario.nome }}
+        </option>
+      </select>
+    </div>
+    <div class="col-md-4 input-style">
+      <label>Título do livro</label>
+      <select (focus)="buscarLivros()" [(ngModel)]="emprestimoDTO.livroId">
+        <option *ngFor="let livro of listaLivros" [value]="livro.id">
+          {{ livro.titulo }}
+        </option>
+      </select>
+    </div>
+    <div class="col-md-2 input-style">
+      <label>Data de Empréstimo</label>
+      <input type="date" required [(ngModel)]="emprestimoDTO.dataEmprestimo">
+    </div>
+    <div class="col-md-2 input-style">
+      <label>Data de Devolução</label>
+      <input type="date" required [(ngModel)]="emprestimoDTO.dataDevolucao">
+    </div>
+  </div>
+  <div class="row container-btn">
+    <button class="estilo-btn" (click)="criarEmprestimo()">EMPRESTAR LIVRO</button>
+    <button class="estilo-btn" (click)="retornarParaLista()">CANCELAR</button>
+  </div>
+</div>

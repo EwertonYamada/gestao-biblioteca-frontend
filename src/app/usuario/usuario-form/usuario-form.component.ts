@@ -42,11 +42,13 @@ export class UsuarioFormComponent {
   }
 
   private inputsValidos(): boolean {
-    return Boolean(this.usuario 
+    return Boolean(
+      this.usuario 
       && this.usuario.nome 
       && this.usuario.email 
       && this.usuario.telefone 
-      && this.usuario.dataCadastro) 
+      && this.usuario.dataCadastro
+    ) 
   }
 
   public retornarParaList(): void {
