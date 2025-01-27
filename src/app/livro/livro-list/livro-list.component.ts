@@ -33,6 +33,7 @@ export class LivroListComponent {
   }
 
   private buscarTodosLivros(): void {
+    this.listTodosLivros = []
     this.livroService.buscarTodosLivros().subscribe({
       next: (response) => {
         this.listTodosLivros = response
@@ -43,4 +44,15 @@ export class LivroListComponent {
     })
   }
 
+  public deletar(livro: Livro): void {
+    if (livro.id == null) return
+    this.livroService.deletar(livro.id).subscribe({
+      next: () => {
+        this.buscarTodosLivros()
+      },
+      error: (error: HttpErrorResponse) => {
+        console.error(error)
+      }
+    })
+  }
 }

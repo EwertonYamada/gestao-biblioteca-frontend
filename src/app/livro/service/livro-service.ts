@@ -27,5 +27,9 @@ export class LivroService {
 
   public buscarRecomendacoes(usuarioId: number): Observable<Array<Livro>> { 
     return this.http.get<Array<Livro>>(`${this.apiUrl}/buscar-recomendacoes/${usuarioId}`)
-  }  
+  }
+
+  public deletar(id: number): Observable<void[]> {     
+    return this.http.delete<Array<void>>(`${this.apiUrl}/deletar-livro/${id}`)
+  }
 }

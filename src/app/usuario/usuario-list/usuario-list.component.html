@@ -10,6 +10,7 @@
                     <th>E-mail</th>
                     <th>Telefone</th>
                     <th>Data de cadastro</th>
+                    <th>Ação</th>
                 </tr>
 
             </thead>
@@ -19,6 +20,11 @@
                     <td>{{ usuario.email }}</td>
                     <td>{{ usuario.telefone }}</td>
                     <td>{{ usuario.dataCadastro }}</td>
+                    <td> 
+                        <button class="botao-acao" (click)="deletar(usuario)">
+                            Deletar
+                        </button>
+                    </td>
                 </tr>
             </tbody>
         </table>

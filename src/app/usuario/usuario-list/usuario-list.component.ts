@@ -39,4 +39,16 @@ export class UsuarioListComponent {
       }
     })
   }
+
+  public deletar(usuario: Usuario): void {
+      if (usuario.id == null) return
+      this.usuarioService.deletar(usuario.id).subscribe({
+        next: () => {
+          this.buscarTodosUsuarios()
+        },
+        error: (error: HttpErrorResponse) => {
+          console.error(error)
+        }
+      })
+    }
 }

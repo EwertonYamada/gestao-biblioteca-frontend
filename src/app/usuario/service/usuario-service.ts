@@ -20,4 +20,8 @@ export class UsuarioService {
   public criarUsuario(usuario: Usuario): Observable<Usuario> {
     return this.http.post<Usuario>(`${this.apiUrl}/criar-usuario`, usuario)
   }
+
+  public deletar(id: number): Observable<void[]> {     
+    return this.http.delete<Array<void>>(`${this.apiUrl}/deletar-usuario/${id}`)
+  }
 }

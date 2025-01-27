@@ -11,6 +11,7 @@
                     <th>Autor</th>
                     <th>Categoria</th>
                     <th>Data de publicação</th>
+                    <th>Ação</th>
                 </tr>
 
             </thead>
@@ -20,6 +21,11 @@
                     <td>{{ livro.autor }}</td>
                     <td>{{ livro.categoria }}</td>
                     <td>{{ livro.dataPublicacao }}</td>
+                    <td> 
+                        <button class="botao-acao" (click)="deletar(livro)">
+                            Deletar
+                        </button>
+                    </td>
                 </tr>
             </tbody>
         </table>

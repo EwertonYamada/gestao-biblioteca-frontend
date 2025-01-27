@@ -4,11 +4,12 @@
       <label>Buscar título no Google Books</label>
       <input type="text" required [(ngModel)]="titulo">
     </div>
-    <div class="col-md-3 container-btn">
+    <div class="col-md-6 container-btn">
       <button class="estilo-btn" (click)="buscarNoGoogleBooks()">Buscar</button>
+      <button class="estilo-btn" (click)="retornarParaLivroList()">Cancelar</button>
     </div>
   </div>
-  <div>
+  <div *ngIf="listaLivrosGoogle.length > 0">
     <table>
       <thead>
         <tr>
@@ -16,6 +17,7 @@
           <th>Autor</th>
           <th>Categoria</th>
           <th>Data de publicação</th>
+          <th>Ação</th>
         </tr>
 
       </thead>
@@ -25,6 +27,11 @@
           <td>{{ livro.autor }}</td>
           <td>{{ livro.categoria }}</td>
           <td>{{ livro.dataPublicacao }}</td>
+          <td> 
+            <button class="botao-acao" (click)="cadastrarLivro(livro)">
+                Cadastrar
+            </button>
+          </td>
         </tr>
       </tbody>
     </table>
