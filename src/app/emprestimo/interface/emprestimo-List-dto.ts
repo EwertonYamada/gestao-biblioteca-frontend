@@ -3,5 +3,6 @@ export interface EmprestimoListDTO {
     nomeUsuario: string,
     titulo: string,
     dataEmprestimo: Date,
-    dataDevolucao: Date
+    dataDevolucao: Date,
+    status: string
 }

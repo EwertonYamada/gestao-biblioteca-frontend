@@ -22,4 +22,8 @@ export class EmprestimoService {
   public criarEmprestimo(emprestimoDTO: EmprestimoDTO): Observable<Emprestimo> {
     return this.http.post<Emprestimo>(`${this.apiUrl}/emprestar-livro`, emprestimoDTO)
   }
+
+  public devolver(id: number): Observable<Emprestimo> {
+    return this.http.put<Emprestimo>(`${this.apiUrl}/devolver-livro/${id}`,{})
+  }
 }

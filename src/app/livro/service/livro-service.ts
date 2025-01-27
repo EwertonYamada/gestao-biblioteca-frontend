@@ -24,4 +24,8 @@ export class LivroService {
   public criarLivro(livro: Livro): Observable<Livro> {
     return this.http.post<Livro>(`${this.apiUrl}/criar-livro`, livro)
   }
+
+  public buscarRecomendacoes(usuarioId: number): Observable<Array<Livro>> { 
+    return this.http.get<Array<Livro>>(`${this.apiUrl}/buscar-recomendacoes/${usuarioId}`)
+  }  
 }

@@ -26,6 +26,7 @@ export class EmprestimoFormComponent {
   }
   public listaLivros: Livro[] = []
   public listaUsuarios: Usuario[] = []
+  public listaRecomendacoes: Livro[] = []
 
   constructor(
     private router: Router,
@@ -69,6 +70,19 @@ export class EmprestimoFormComponent {
     this.usuarioService.buscarTodosUsuarios().subscribe({
       next: (response) => {         
         this.listaUsuarios = response
+      },
+      error: (error: HttpErrorResponse) => {
+        console.error(error)
+      }
+    })
+  }
+
+  public buscarRecomendacoes(): void {
+    if (this.emprestimoDTO.usuarioId == null) return
+    this.listaRecomendacoes = []
+    this.livroService.buscarRecomendacoes(this.emprestimoDTO.usuarioId).subscribe({
+      next: (response) => {                 
+        this.listaRecomendacoes = response
       },
       error: (error: HttpErrorResponse) => {
         console.error(error)

@@ -10,6 +10,8 @@
                     <th>Usuario</th>
                     <th>Data do empréstimo</th>
                     <th>Data de devolução</th>
+                    <th>Status</th>
+                    <th>Ação</th>
                 </tr>
 
             </thead>
@@ -19,6 +21,13 @@
                     <td>{{ emprestimo.nomeUsuario }}</td>
                     <td>{{ emprestimo.dataEmprestimo }}</td>
                     <td>{{ emprestimo.dataDevolucao }}</td>
+                    <td>{{ emprestimo.status }}</td>
+                    <td> 
+                        <button class="botao-acao" (click)="devolver(emprestimo.emprestimoId)" [disabled]="emprestimo.status == 'INATIVO'">
+                            Devolver
+                        </button>
+                    </td>
+
                 </tr>
             </tbody>
         </table>

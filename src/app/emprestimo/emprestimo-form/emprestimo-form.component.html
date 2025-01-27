@@ -2,7 +2,7 @@
   <div class="row inputs-cadastro">
     <div class="col-md-4 input-style">
       <label>Usuário</label>
-      <select [(ngModel)]="emprestimoDTO.usuarioId">
+      <select [(ngModel)]="emprestimoDTO.usuarioId" (change)="buscarRecomendacoes()">
         <option *ngFor="let usuario of listaUsuarios" [value]="usuario.id">
           {{ usuario.nome }}
         </option>
@@ -29,4 +29,27 @@
     <button class="estilo-btn" (click)="criarEmprestimo()">EMPRESTAR LIVRO</button>
     <button class="estilo-btn" (click)="retornarParaLista()">CANCELAR</button>
   </div>
+  <div class="table-recomendacoes" *ngIf="listaRecomendacoes.length > 0">
+    <h3 class="recomendacao-label">Redomendações de livros</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Categoria</th>
+                <th>Data de publicação</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let livro of listaRecomendacoes">
+                <td>{{ livro.titulo }}</td>
+                <td>{{ livro.autor }}</td>
+                <td>{{ livro.categoria }}</td>
+                <td>{{ livro.dataPublicacao }}</td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+
 </div>

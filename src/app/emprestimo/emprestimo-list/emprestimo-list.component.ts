@@ -39,4 +39,13 @@ export class EmprestimoListComponent {
       }
     })
   }
+
+  public devolver(id: number): void {
+    this.emprestimoService.devolver(id).subscribe({
+      next: () => {},
+      error: (error: HttpErrorResponse) => {
+        console.error(error)
+      }
+    })
+  }
 }
