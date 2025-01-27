@@ -16,5 +16,4 @@ export class MenuComponent {
   public redirecionar(rota: string): void {
     this.router.navigate([rota])
   }
-
 }

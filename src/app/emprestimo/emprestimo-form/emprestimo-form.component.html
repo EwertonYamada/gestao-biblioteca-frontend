@@ -2,7 +2,7 @@
   <div class="row inputs-cadastro">
     <div class="col-md-4 input-style">
       <label>Usuário</label>
-      <select (focus)="buscarUsuarios()" [(ngModel)]="emprestimoDTO.usuarioId">
+      <select [(ngModel)]="emprestimoDTO.usuarioId">
         <option *ngFor="let usuario of listaUsuarios" [value]="usuario.id">
           {{ usuario.nome }}
         </option>
@@ -10,7 +10,7 @@
     </div>
     <div class="col-md-4 input-style">
       <label>Título do livro</label>
-      <select (focus)="buscarLivros()" [(ngModel)]="emprestimoDTO.livroId">
+      <select [(ngModel)]="emprestimoDTO.livroId">
         <option *ngFor="let livro of listaLivros" [value]="livro.id">
           {{ livro.titulo }}
         </option>

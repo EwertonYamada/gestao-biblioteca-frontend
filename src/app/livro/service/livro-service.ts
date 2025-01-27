@@ -13,6 +13,10 @@ export class LivroService {
 
   constructor(protected http: HttpClient) {}
 
+  public buscarTodosLivrosDisponiveis(): Observable<Array<Livro>> { 
+    return this.http.get<Array<Livro>>(`${this.apiUrl}/buscar-livros-disponiveis`)
+  }
+
   public buscarTodosLivros(): Observable<Array<Livro>> { 
     return this.http.get<Array<Livro>>(`${this.apiUrl}/buscar-todos`)
   }

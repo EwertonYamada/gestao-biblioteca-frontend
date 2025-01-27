@@ -34,10 +34,12 @@ export class EmprestimoFormComponent {
     private usuarioService: UsuarioService
   ) {}
 
-  public criarEmprestimo(): void {
+  ngOnInit(): void {
+    this.buscarLivros()
+    this.buscarUsuarios()
+  }
 
-    this.emprestimoDTO.livroId = 1
-    this.emprestimoDTO.usuarioId = 2
+  public criarEmprestimo(): void {
     this.emprestimoService.criarEmprestimo(this.emprestimoDTO).subscribe({
       next: () => {         
         this.retornarParaLista()
@@ -49,12 +51,12 @@ export class EmprestimoFormComponent {
   }
 
   public retornarParaLista(): void {
-    this.router.navigate(['/empresto-list'])
+    this.router.navigate(['/emprestimo-list'])
   }
 
   public buscarLivros(): void {
-    this.livroService.buscarTodosLivros().subscribe({
-      next: (response) => {         
+    this.livroService.buscarTodosLivrosDisponiveis().subscribe({
+      next: (response) => {                 
         this.listaLivros = response
       },
       error: (error: HttpErrorResponse) => {

@@ -9,12 +9,11 @@ import { Livro } from "../../livro/interface/livro";
 })
 
 export class GoogleBooksService {
-  private apiUrl: string = `${API_URL}/google-books`
+  private apiUrl: string = `${API_URL}/livro`
 
   constructor(protected http: HttpClient) {}
 
-
   public buscarNoGoogleBooks(titulo: string): Observable<Livro[]> {
-    return this.http.get<Livro[]>(`${this.apiUrl}/buscar-titulo/${titulo}`)
+    return this.http.get<Livro[]>(`${this.apiUrl}/buscar-titulo-google-books/${titulo}`)
   }
 }

@@ -16,11 +16,11 @@ export const routes: Routes = [
         children: [
             {path: 'home', component: HomeComponent},
             {path: '', redirectTo: '/home', pathMatch: 'full'},
-            {path: 'usuario-list', component: UsuarioListComponent, title: 'LISTA DE USUÁRIO'},
+            {path: 'usuario-list', component: UsuarioListComponent, title: 'LISTA DE USUÁRIOS'},
             {path: 'usuario-form', component: UsuarioFormComponent, title: 'CADASTRO DE USUÁRIO'},
-            {path: 'livro-list', component: LivroListComponent, title: 'LISTA DE LIVRO'},
+            {path: 'livro-list', component: LivroListComponent, title: 'LISTA DE LIVROS'},
             {path: 'livro-form', component: LivroFormComponent, title: 'CADASTRO DE LIVRO'},
-            {path: 'emprestimo-list', component: EmprestimoListComponent, title: 'LISTA DE EMPRÉSTIMO'},
+            {path: 'emprestimo-list', component: EmprestimoListComponent, title: 'LISTA DE EMPRÉSTIMOS'},
             {path: 'emprestimo-form', component: EmprestimoFormComponent, title: 'EMPRÉSTIMO'},
             {path: 'google-books', component: GoogleBooksListComponent, title: 'BUSCA NO GOOGLE BOOKS'},
 

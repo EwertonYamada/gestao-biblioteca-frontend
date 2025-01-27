@@ -1,11 +1,32 @@
 <div class="google-books-list">
-    <div class="row busca inputs-cadastro">
-        <div class="col-md-4 input-style">
-            <label>Buscar título no Google Books</label>
-            <input type="text" required [(ngModel)]="titulo">
-        </div>
-        <div class="col-md-3 container-btn">
-            <button class="estilo-btn" (click)="buscarNoGoogleBooks()">Buscar</button>
-        </div>
+  <div class="row busca inputs-cadastro">
+    <div class="col-md-4 input-style">
+      <label>Buscar título no Google Books</label>
+      <input type="text" required [(ngModel)]="titulo">
     </div>
+    <div class="col-md-3 container-btn">
+      <button class="estilo-btn" (click)="buscarNoGoogleBooks()">Buscar</button>
+    </div>
+  </div>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Título</th>
+          <th>Autor</th>
+          <th>Categoria</th>
+          <th>Data de publicação</th>
+        </tr>
+
+      </thead>
+      <tbody>
+        <tr *ngFor="let livro of listaLivrosGoogle">
+          <td>{{ livro.titulo }}</td>
+          <td>{{ livro.autor }}</td>
+          <td>{{ livro.categoria }}</td>
+          <td>{{ livro.dataPublicacao }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

@@ -3,4 +3,25 @@
         <button class="estilo-btn" (click)="novoLivro()">CADASTRAR LIVRO</button>
         <button class="estilo-btn" (click)="irParaBuscaGoogle()">GOOGLE BOOKS</button>
     </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Categoria</th>
+                    <th>Data de publicação</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr *ngFor="let livro of listTodosLivros">
+                    <td>{{ livro.titulo }}</td>
+                    <td>{{ livro.autor }}</td>
+                    <td>{{ livro.categoria }}</td>
+                    <td>{{ livro.dataPublicacao }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

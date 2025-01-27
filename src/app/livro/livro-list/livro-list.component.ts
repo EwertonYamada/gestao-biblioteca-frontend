@@ -3,11 +3,12 @@ import { Router } from '@angular/router';
 import { LivroService } from '../service/livro-service';
 import { Livro } from '../interface/livro';
 import { HttpErrorResponse } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-livro-list',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './livro-list.component.html',
   styleUrl: './livro-list.component.scss'
 })
@@ -33,7 +34,7 @@ export class LivroListComponent {
 
   private buscarTodosLivros(): void {
     this.livroService.buscarTodosLivros().subscribe({
-      next: (response) => {        
+      next: (response) => {
         this.listTodosLivros = response
       },
       error: (error: HttpErrorResponse) => {

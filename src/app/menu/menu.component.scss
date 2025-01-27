@@ -9,6 +9,9 @@
         font-weight: bold;
         color: white;
         font-size: large;
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     .link-modulo {

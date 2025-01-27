@@ -30,6 +30,22 @@ input {
     }
 }
 
+table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+th,
+td {
+    padding: 2px;
+    text-align: left;
+}
+
+th {
+    background-color: white;
+}
+
+tbody{
+    background-color: rgb(204, 204, 204);
+}

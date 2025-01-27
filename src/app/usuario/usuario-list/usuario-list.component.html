@@ -2,7 +2,25 @@
     <div class="row container-btn-concluir">
         <button class="estilo-btn" (click)="novoUsuario()">CADASTRAR USUÁRIO</button>
     </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>Data de cadastro</th>
+                </tr>
 
-
-
+            </thead>
+            <tbody>
+                <tr *ngFor="let usuario of listaTodosUsusarios">
+                    <td>{{ usuario.nome }}</td>
+                    <td>{{ usuario.email }}</td>
+                    <td>{{ usuario.telefone }}</td>
+                    <td>{{ usuario.dataCadastro }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

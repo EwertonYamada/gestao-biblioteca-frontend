@@ -2,4 +2,25 @@
     <div class="row container-btn">
         <button class="estilo-btn" (click)="novoEmprestimo()">NOVO EMPRÉSTIMO</button>
     </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Usuario</th>
+                    <th>Data do empréstimo</th>
+                    <th>Data de devolução</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr *ngFor="let emprestimo of listaEmprestimos">
+                    <td>{{ emprestimo.titulo }}</td>
+                    <td>{{ emprestimo.nomeUsuario }}</td>
+                    <td>{{ emprestimo.dataEmprestimo }}</td>
+                    <td>{{ emprestimo.dataDevolucao }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
